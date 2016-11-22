@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rainbow Paragraphs</title>
+</head>
+
+<body>
+    <script>
+    var paraGenerator = function paraGenerator() {
+        for (var i = 0; i < 840; i++) {
+            var para = document.createElement('P');
+            para.innerHTML = `Lorem ipsum dolor sit amet, ${i + 1} consectetur adipisicing elit.`
+            document.body.appendChild(para);
+
+        }
+    }
+
+    paraGenerator()
+
+    var rbPara = document.getElementsByTagName('p')
+    console.log(rbPara)
+
+    for (var i = 0; i < rbPara.length; i++) {
+
+        switch (i % 7) {
+            case 0:
+                rbPara[i].style.background = 'violet';
+                break;
+            case 1:
+                rbPara[i].style.background = 'indigo';
+                break;
+            case 2:
+                rbPara[i].style.background = 'blue';
+                break;
+            case 3:
+                rbPara[i].style.background = 'green';
+                break;
+            case 4:
+                rbPara[i].style.background = 'yellow';
+                break;
+            case 5:
+                rbPara[i].style.background = 'orange';
+                break;
+            default:
+                rbPara[i].style.background = 'red';
+        }
+    }
+    </script>
+</body>
+
+</html>
